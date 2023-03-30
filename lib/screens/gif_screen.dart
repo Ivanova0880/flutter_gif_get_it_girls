@@ -28,11 +28,14 @@ class _GifScreenState extends State<GifScreen> {
       appBar: AppBar(
         title: const Text('GIF'),
       ),
-      body: ListView.builder(
-          itemCount: images.length,
-          itemBuilder: (context, index) {
-            return Image.network(images[index]);
-          }),
+      body: GridView.builder(
+        itemCount: images.length,
+        itemBuilder: (context, index) {
+          return Image.network(images[index]);
+        },
+        gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+      ),
     );
   }
 }

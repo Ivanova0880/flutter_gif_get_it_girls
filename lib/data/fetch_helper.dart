@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class FetchHelper {
   Future<List<String>> fetchImages() async {
-    const fullUri = 'https://$baseUrl?api_key=$apiKey&limit=$limit';
+    const fullUri = 'https://$baseUrl?api_key=$apiKey&q=$q&limit=$limit';
     final uri = Uri.parse(fullUri);
     final response = await http.get(uri);
     if (response.statusCode == 200) {
