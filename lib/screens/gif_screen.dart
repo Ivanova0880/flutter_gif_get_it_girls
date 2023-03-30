@@ -34,7 +34,7 @@ class _GifScreenState extends State<GifScreen> {
           return Image.network(images[index]);
         },
         gridDelegate:
-            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       ),
     );
   }
